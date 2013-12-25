@@ -1,0 +1,18 @@
+<h1>Officer</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @officer.name %>
+</p>
+ 
+<p>
+  <strong>Position:</strong>
+  <%= @officer.position %>
+</p>
+
+<p>
+  <strong>Image URL:</strong>
+  <%= @officer.img_url %>
+</p>
+
+<%= link_to 'Back', officers_path %> | <%= link_to 'Edit', edit_officer_path(@officer) %>

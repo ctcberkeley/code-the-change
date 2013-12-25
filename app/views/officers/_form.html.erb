@@ -1,0 +1,33 @@
+<%= form_for @officer do |f| %>
+  
+  <% if @officer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@officer.errors.count, "error") %> prohibited this officer from being saved:</h2>
+      <ul>
+      <% @officer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :position %><br>
+    <%= f.text_field :position %>
+  </p>
+
+  <p>
+    <%= f.label :img_url %><br>
+    <%= f.text_field :img_url %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+  
+<% end %>
