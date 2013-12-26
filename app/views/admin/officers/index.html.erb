@@ -1,6 +1,6 @@
 <h1>Officers</h1>
  
-<%= link_to 'New officer', new_officer_path %>
+<%= link_to 'New officer', new_admin_officer_path %>
 
 <table>
   <tr>
@@ -17,9 +17,9 @@
       <td><%= officer.name %></td>
       <td><%= officer.position %></td>
       <td><%= officer.img_url %></td>
-      <td><%= link_to 'Show', officer %></td>
-      <td><%= link_to 'Edit', edit_officer_path(officer) %></td>
-      <td><%= link_to 'Destroy', officer_path(officer), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Show', admin_officer_path(officer) %></td>
+      <td><%= link_to 'Edit', edit_admin_officer_path(officer) %></td>
+      <td><%= link_to 'Destroy', admin_officer_path(officer), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>

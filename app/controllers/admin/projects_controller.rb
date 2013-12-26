@@ -1,4 +1,4 @@
-class ProjectsController < ApplicationController
+class Admin::ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-      redirect_to @project
+      redirect_to admin_projects_path
     else
       render 'new'
     end
@@ -29,7 +29,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
 
     if @project.update(params[:project].permit(:organization, :description, :url))
-      redirect_to @project
+      redirect_to admin_projects_path
     else
       render 'edit'
     end
@@ -39,7 +39,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @project.destroy
 
-    redirect_to projects_path
+    redirect_to admin_projects_path
   end
 
   private

@@ -1,4 +1,4 @@
-class EventsController < ApplicationController
+class Admin::EventsController < ApplicationController
 
   def index
     @events = Event.all
@@ -7,7 +7,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     if @event.save
-      redirect_to @event
+      redirect_to admin_events_path
     else
       render 'new'
     end
@@ -29,7 +29,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
 
     if @event.update(params[:event].permit(:title, :start, :end, :location, :description, :url))
-      redirect_to @event
+      redirect_to admin_events_path
     else
       render 'edit'
     end
@@ -39,7 +39,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @event.destroy
 
-    redirect_to events_path
+    redirect_to admin_events_path
   end
 
   private

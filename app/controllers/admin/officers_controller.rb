@@ -1,4 +1,4 @@
-class OfficersController < ApplicationController
+class Admin::OfficersController < ApplicationController
 
   def index
     @officers = Officer.all
@@ -7,7 +7,7 @@ class OfficersController < ApplicationController
   def create
     @officer = Officer.new(officer_params)
     if @officer.save
-      redirect_to @officer
+      redirect_to admin_officers_path
     else
       render 'new'
     end
@@ -29,7 +29,7 @@ class OfficersController < ApplicationController
     @officer = Officer.find(params[:id])
 
     if @officer.update(params[:officer].permit(:name, :position, :img_url))
-      redirect_to @officer
+      redirect_to admin_officers_path
     else
       render 'edit'
     end
@@ -39,7 +39,7 @@ class OfficersController < ApplicationController
     @officer = Officer.find(params[:id])
     @officer.destroy
 
-    redirect_to officers_path
+    redirect_to admin_officers_path
   end
 
   private

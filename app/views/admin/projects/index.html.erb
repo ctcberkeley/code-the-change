@@ -1,6 +1,6 @@
 <h1>Projects</h1>
  
-<%= link_to 'New project', new_project_path %>
+<%= link_to 'New project', new_admin_project_path %>
 
 <table>
   <tr>
@@ -17,9 +17,9 @@
       <td><%= project.organization %></td>
       <td><%= project.description %></td>
       <td><%= project.url %></td>
-      <td><%= link_to 'Show', project %></td>
-      <td><%= link_to 'Edit', edit_project_path(project) %></td>
-      <td><%= link_to 'Destroy', project_path(project), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Show', admin_project_path(project) %></td>
+      <td><%= link_to 'Edit', edit_admin_project_path(project) %></td>
+      <td><%= link_to 'Destroy', admin_project_path(project), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
