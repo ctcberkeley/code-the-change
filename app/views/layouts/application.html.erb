@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Code the Change helps computer scientists use their skills to make social change an integral part of computer science culture.">
-    <meta name="author" content="Michael Lannin">
-    <%= csrf_meta_tags %>
-
-    <title>Code the Change</title>
-    
+    <title><%= content_for?(:title) ? yield(:title) : "Code the Change" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Code The Change" %>">
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
   </head>
   <body>
-
-    <div class="container">
-      <%= yield %>
-    </div>
-
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <main role="main">
+       <%= render 'layouts/messages' %>
+       <%= yield %>
+    </main>
   </body>
 </html>
