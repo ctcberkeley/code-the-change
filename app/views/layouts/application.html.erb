@@ -2,19 +2,20 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Code the Change" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Code the Change" %>">
-    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
+
+    <title><%= content_for?(:title) ? yield(:title) : "Code the Change" %></title>
+
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   </head>
   <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-      <%= render 'layouts/messages' %>
-      <%= yield %>
-    </main>
+    <%= render 'layouts/header' %>
+
+    <%= render 'layouts/messages' %>
+    
+    <%= yield %>
+
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   </body>
 </html>
