@@ -1,31 +1,33 @@
-<h1>Events</h1>
- 
-<%= link_to 'New event', new_admin_event_path %>
+<div class="container">
+  <h1>Events</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Start</th>
-    <th>End</th>
-    <th>Location</th>
-    <th>Description</th>
-    <th>URL</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
- 
-  <% @events.each do |event| %>
+  <p>
+    <%= link_to 'New Event', new_admin_event_path, { class: "btn btn-default" } %>
+  </p>
+
+  <table class="table">
     <tr>
-      <td><%= event.title %></td>
-      <td><%= event.start %></td>
-      <td><%= event.end %></td>
-      <td><%= event.location %></td>
-      <td><%= event.description %></td>
-      <td><%= event.url %></td>
-      <td><%= link_to 'Show', admin_event_path(event) %></td>
-      <td><%= link_to 'Edit', edit_admin_event_path(event) %></td>
-      <td><%= link_to 'Destroy', admin_event_path(event), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <th>Title</th>
+      <th>Start</th>
+      <th>End</th>
+      <th>Location</th>
+      <th>Description</th>
+      <th>URL</th>
+      <th>Actions</th>
     </tr>
-  <% end %>
-</table>
+   
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.title %></td>
+        <td><%= event.start %></td>
+        <td><%= event.end %></td>
+        <td><%= event.location %></td>
+        <td><%= event.description %></td>
+        <td><%= event.url %></td>
+        <td><%= link_to 'Show', admin_event_path(event) %> | 
+            <%= link_to 'Edit', edit_admin_event_path(event) %> | 
+            <%= link_to 'Destroy', admin_event_path(event), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
