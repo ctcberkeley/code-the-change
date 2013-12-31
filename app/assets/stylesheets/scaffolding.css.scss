@@ -4,7 +4,13 @@
  * Styles for basic elements
  */
 
+html,
 body {
-  position: relative;
-  padding-top: 50px;
+  height: 100%;
+  .wrapper {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -100px;
+    padding: 50px 0 100px;
+  }
 }

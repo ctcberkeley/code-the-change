@@ -11,10 +11,14 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
-
-    <%= render 'layouts/messages' %>
     
-    <%= yield %>
+    <div class="wrapper">
+      <%= render 'layouts/messages' %>
+      
+      <%= yield %>
+    </div>
+    
+    <%= render 'layouts/footer' %>
 
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   </body>
