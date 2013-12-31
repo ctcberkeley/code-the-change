@@ -1,3 +1,25 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*
+ * Hero
+ *
+ * Homepage image and caption
+ */
+
+.hero {
+  padding: 30px 15px 40px;
+  text-align: center;
+  img {
+    margin: 0 auto;
+  }
+  .container {
+    position: relative;
+  }
+ }
+ @media (min-width: 768px) {
+  .hero {
+    font-size: 21px;
+  }
+}
