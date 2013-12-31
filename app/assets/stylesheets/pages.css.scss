@@ -3,13 +3,31 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /*
+ * Sections
+ *
+ * Content blocks for information
+ */
+.section {
+  padding-bottom: 50px;
+  .subheader {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 5px 0;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+  }
+}
+
+/*
  * Hero
  *
  * Homepage image and caption
  */
 
 .hero {
-  padding: 30px 15px 40px;
+  padding-top: 30px;
   text-align: center;
   img {
     margin: 0 auto;
@@ -21,5 +39,24 @@
  @media (min-width: 768px) {
   .hero {
     font-size: 21px;
+  }
+}
+
+/*
+ * Panels
+ *
+ * Accordian styles for events and projects
+ */
+
+.ctc-panel-group {
+  a {
+    text-decoration: none;
+    .panel-title {
+      margin-bottom: 3px;
+    }
+  }
+  p {
+    font-size: 13px;
+    margin-bottom: 0;
   }
 }
