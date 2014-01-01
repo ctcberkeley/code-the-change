@@ -1,0 +1,27 @@
+<div class="section">
+  <div class="container">
+    <h1>Terms</h1>
+     
+    <p>
+      <%= link_to 'New Term', new_admin_term_path, { class: "btn btn-default" } %>
+    </p>
+
+    <table class="table">
+      <tr>
+        <th>Season</th>
+        <th>Year</th>
+        <th>Actions</th>
+      </tr>
+     
+      <% @terms.each do |term| %>
+        <tr>
+          <td><%= term.season %></td>
+          <td><%= term.year %></td>
+          <td><%= link_to 'Show', admin_term_path(term) %> | 
+              <%= link_to 'Edit', edit_admin_term_path(term) %> | 
+              <%= link_to 'Destroy', admin_term_path(term), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

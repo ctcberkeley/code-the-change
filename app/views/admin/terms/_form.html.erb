@@ -1,0 +1,28 @@
+<%= form_for [:admin, @term] do |f| %>
+  
+  <% if @term.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@term.errors.count, "error") %> prohibited this term from being saved:</h2>
+      <ul>
+      <% @term.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :season %><br>
+    <%= f.select :season, ['Fall', 'Spring'] %>
+  </p>
+ 
+  <p>
+    <%= f.label :year %><br>
+    <%= f.number_field :year %>
+  </p>
+ 
+  <p>
+    <%= f.submit :class => "btn btn-default" %>
+  </p>
+  
+<% end %>

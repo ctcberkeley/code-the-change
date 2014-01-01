@@ -1,0 +1,17 @@
+<div class="section">
+  <div class="container">
+    <h1>Term</h1>
+
+    <p>
+      <strong>Season:</strong>
+      <%= @term.season %>
+    </p>
+     
+    <p>
+      <strong>Year:</strong>
+      <%= @term.year %>
+    </p>
+
+    <%= link_to 'Back', admin_terms_path %> | <%= link_to 'Edit', edit_admin_term_path(@term) %>
+  </div>
+</div>
