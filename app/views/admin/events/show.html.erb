@@ -1,35 +1,37 @@
 <div class="container">
-  <h1>Event</h1>
+  <div class="section">
+    <h1>Event</h1>
 
-  <p>
-    <strong>Title:</strong>
-    <%= @event.title %>
-  </p>
-   
-  <p>
-    <strong>Start:</strong>
-    <%= @event.start %>
-  </p>
+    <p>
+      <strong>Title:</strong>
+      <%= @event.title %>
+    </p>
+     
+    <p>
+      <strong>Start:</strong>
+      <%= @event.start %>
+    </p>
 
-  <p>
-    <strong>End:</strong>
-    <%= @event.end %>
-  </p>
+    <p>
+      <strong>End:</strong>
+      <%= @event.end %>
+    </p>
 
-  <p>
-    <strong>Location:</strong>
-    <%= @event.location %>
-  </p>
+    <p>
+      <strong>Location:</strong>
+      <%= @event.location %>
+    </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @event.description %>
-  </p>
+    <p>
+      <strong>Description:</strong>
+      <%= @event.description %>
+    </p>
 
-  <p>
-    <strong>URL:</strong>
-    <%= @event.url %>
-  </p>
+    <p>
+      <strong>URL:</strong>
+      <%= @event.url %>
+    </p>
 
-  <%= link_to 'Back', admin_events_path %> | <%= link_to 'Edit', edit_admin_event_path(@event) %>
+    <%= link_to 'Back', admin_events_path %> | <%= link_to 'Edit', edit_admin_event_path(@event) %>
+  </div>
 </div>

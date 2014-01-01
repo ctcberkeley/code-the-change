@@ -1,20 +1,22 @@
 <div class="container">
-  <h1>Officer</h1>
+  <div class="section">
+    <h1>Officer</h1>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @officer.name %>
-  </p>
-   
-  <p>
-    <strong>Position:</strong>
-    <%= @officer.position %>
-  </p>
+    <p>
+      <strong>Name:</strong>
+      <%= @officer.name %>
+    </p>
+     
+    <p>
+      <strong>Position:</strong>
+      <%= @officer.position %>
+    </p>
 
-  <p>
-    <strong>Image URL:</strong>
-    <%= @officer.img_url %>
-  </p>
+    <p>
+      <strong>Image URL:</strong>
+      <%= @officer.img_url %>
+    </p>
 
-  <%= link_to 'Back', admin_officers_path %> | <%= link_to 'Edit', edit_admin_officer_path(@officer) %>
+    <%= link_to 'Back', admin_officers_path %> | <%= link_to 'Edit', edit_admin_officer_path(@officer) %>
+  </div>
 </div>

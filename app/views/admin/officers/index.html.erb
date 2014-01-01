@@ -1,27 +1,29 @@
 <div class="container">
-  <h1>Officers</h1>
-   
-  <p>
-    <%= link_to 'New Officer', new_admin_officer_path, { class: "btn btn-default" } %>
-  </p>
+  <div class="section">
+    <h1>Officers</h1>
+     
+    <p>
+      <%= link_to 'New Officer', new_admin_officer_path, { class: "btn btn-default" } %>
+    </p>
 
-  <table class="table">
-    <tr>
-      <th>Name</th>
-      <th>Position</th>
-      <th>Image URL</th>
-      <th>Actions</th>
-    </tr>
-   
-    <% @officers.each do |officer| %>
+    <table class="table">
       <tr>
-        <td><%= officer.name %></td>
-        <td><%= officer.position %></td>
-        <td><%= officer.img_url %></td>
-        <td><%= link_to 'Show', admin_officer_path(officer) %> | 
-            <%= link_to 'Edit', edit_admin_officer_path(officer) %> | 
-            <%= link_to 'Destroy', admin_officer_path(officer), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Image URL</th>
+        <th>Actions</th>
       </tr>
-    <% end %>
-  </table>
+     
+      <% @officers.each do |officer| %>
+        <tr>
+          <td><%= officer.name %></td>
+          <td><%= officer.position %></td>
+          <td><%= officer.img_url %></td>
+          <td><%= link_to 'Show', admin_officer_path(officer) %> | 
+              <%= link_to 'Edit', edit_admin_officer_path(officer) %> | 
+              <%= link_to 'Destroy', admin_officer_path(officer), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
 </div>
