@@ -6,6 +6,7 @@ class Admin::OfficersController < ApplicationController
 
   def create
     @officer = Officer.new(officer_params)
+
     if @officer.save
       redirect_to admin_officers_path
     else
@@ -37,8 +38,8 @@ class Admin::OfficersController < ApplicationController
 
   def destroy
     @officer = Officer.find(params[:id])
+    
     @officer.destroy
-
     redirect_to admin_officers_path
   end
 

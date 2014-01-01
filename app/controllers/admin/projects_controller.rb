@@ -6,6 +6,7 @@ class Admin::ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
+
     if @project.save
       redirect_to admin_projects_path
     else
@@ -37,8 +38,8 @@ class Admin::ProjectsController < ApplicationController
 
   def destroy
     @project = Project.find(params[:id])
+    
     @project.destroy
-
     redirect_to admin_projects_path
   end
 
