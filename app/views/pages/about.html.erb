@@ -1,0 +1,73 @@
+<div class="about">
+  <div class="container">
+    <h2>About Us</h2>
+    <div class="row">
+      <div class="col-md-8">
+        <p>Code the Change at Berkeley is an organization that empowers computer scientists and engineers to use their technical skills for social good through non-profit projects.</p>
+        <p>We form project teams to assist non-profits in achieving their goals, whether it be through web development or mobile app design. Our project teams are comprised of Cal students with a passion for both technology and the social sector. Our project teams offer a unique opportunity to improve your technical abilities and form meaningful relationships with members who share similar interests.</p>
+        <p>To learn more about Code the Change as a national organization, please visit <%= link_to "codethechange.org", "https://codethechange.org/", target: "_blank" %>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag("/assets/samking-clinton-2012-03-30.jpg", class: "img-circle img-responsive about-image") %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="officers">
+  <div class="container">
+    <h2>Officers</h2>
+    <ul class="ch-grid">
+      <% if @president %>
+        <li>
+          <div class="ch-item" <% if @president.img_url != '' %>style="background-image:url('<%= @president.img_url %>')"<% end %>>
+            <div class="ch-info">
+              <h3><%= @president.name %></h3>
+              <p><%= @president.position %></p>
+            </div>
+          </div>
+        </li>
+      <% end %>
+      <% if @vp_of_operations %>
+        <li>
+          <div class="ch-item">
+            <div class="ch-info">
+              <h3><%= @vp_of_operations.name %></h3>
+              <p><%= @vp_of_operations.position %></p>
+            </div>
+          </div>
+        </li>
+      <% end %>
+      <% if @vp_of_training_and_development %>
+        <li>
+          <div class="ch-item">
+            <div class="ch-info">
+              <h3><%= @vp_of_training_and_development.name %></h3>
+              <p><%= @vp_of_training_and_development.position %></p>
+            </div>
+          </div>
+        </li>
+      <% end %>
+      <% if @vp_of_marketing_and_finance %>
+        <li>
+          <div class="ch-item">
+            <div class="ch-info">
+              <h3><%= @vp_of_marketing_and_finance.name %></h3>
+              <p><%= @vp_of_marketing_and_finance.position %></p>
+            </div>
+          </div>
+        </li>
+      <% end %>
+      <% @project_managers.each do |project_manager| %>
+        <li>
+        <div class="ch-item">
+          <div class="ch-info">
+            <h3><%= project_manager.name %></h3>
+            <p><%= project_manager.position %></p>
+          </div>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
