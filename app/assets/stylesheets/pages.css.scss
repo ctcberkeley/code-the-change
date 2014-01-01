@@ -67,7 +67,9 @@
 }
 @media (min-width: 768px) {
   .about {
-    margin: 0 auto;
+    .about-image {
+      margin: 0 auto;
+    }
   }
 }
 
