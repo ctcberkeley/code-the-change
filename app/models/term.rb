@@ -1,4 +1,6 @@
 class Term < ActiveRecord::Base
+  has_many :projects
+
   validates :season, presence: true
   validates :year, 
     presence: true,

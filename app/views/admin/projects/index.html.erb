@@ -11,6 +11,7 @@
         <th>Organization</th>
         <th>Description</th>
         <th>URL</th>
+        <th>Term</th>
         <th>Actions</th>
       </tr>
      
@@ -19,6 +20,7 @@
           <td><%= project.organization %></td>
           <td><%= project.description %></td>
           <td><%= project.url %></td>
+          <td><%= Term.find(project.term_id).season + " " + Term.find(project.term_id).year.to_s %></td>
           <td><%= link_to 'Show', admin_project_path(project) %> | 
               <%= link_to 'Edit', edit_admin_project_path(project) %> | 
               <%= link_to 'Destroy', admin_project_path(project), method: :delete, data: { confirm: 'Are you sure?' } %></td>
