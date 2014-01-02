@@ -13,7 +13,7 @@
       <% @upcoming_events.each do |upcoming_event| %>
         <div class="panel panel-default">
           <div class="panel-heading">
-            <a data-toggle="collapse" data-parent="#upcoming-event-accordion" href="<%= '#' + upcoming_event.id.to_s() %>">
+            <a data-toggle="collapse" data-parent="#upcoming-event-accordion" href="<%= '#' + upcoming_event.id.to_s %>">
               <h4 class="panel-title"><%= upcoming_event.title %></h4>
               <p><%= upcoming_event.start.strftime("%A, %B %d") %> | <%= upcoming_event.start.strftime("%I:%M%p") %> to <%= upcoming_event.end.strftime("%I:%M%p") %> | <%= upcoming_event.location %></p>
             </a>
@@ -31,7 +31,7 @@
       <% @past_events.each do |past_event| %>
         <div class="panel panel-default">
           <div class="panel-heading">
-            <a data-toggle="collapse" data-parent="#past-event-accordion" href="<%= '#' + past_event.id.to_s() %>">
+            <a data-toggle="collapse" data-parent="#past-event-accordion" href="<%= '#' + past_event.id.to_s %>">
               <h4 class="panel-title"><%= past_event.title %></h4>
               <p><%= past_event.start.strftime("%A, %B %d") %> | <%= past_event.start.strftime("%I:%M%p") %> to <%= past_event.end.strftime("%I:%M%p") %> | <%= past_event.location %></p>
             </a>

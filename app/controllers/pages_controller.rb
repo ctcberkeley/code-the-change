@@ -35,6 +35,7 @@ class PagesController < ApplicationController
   end
 
   def projects
+    @terms = Term.all
   end
 
 end
