@@ -36,6 +36,7 @@ class PagesController < ApplicationController
 
   def projects
     @terms = Term.all
+    @terms.sort! { |a,b| (a.year == b.year) ? a.season <=> b.season : b.year <=> a.year }
   end
 
 end
