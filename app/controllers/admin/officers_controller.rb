@@ -1,5 +1,7 @@
 class Admin::OfficersController < ApplicationController
 
+  before_filter :authenticate
+
   def index
     @officers = Officer.all
   end
