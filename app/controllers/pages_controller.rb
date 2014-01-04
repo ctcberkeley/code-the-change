@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 
   def home
     @events = Event.all
+    @events.sort! { |a,b| b.start <=> a.start }
     @upcoming_events = []
     @past_events = []
     time = Time.now
