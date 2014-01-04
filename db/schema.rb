@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140102051505) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "events", force: true do |t|
     t.string   "title"
     t.datetime "start"
@@ -41,7 +44,7 @@ ActiveRecord::Schema.define(version: 20140102051505) do
     t.integer  "term_id"
   end
 
-  add_index "projects", ["term_id"], name: "index_projects_on_term_id"
+  add_index "projects", ["term_id"], name: "index_projects_on_term_id", using: :btree
 
   create_table "terms", force: true do |t|
     t.datetime "created_at"
