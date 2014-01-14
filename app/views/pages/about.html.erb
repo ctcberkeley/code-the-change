@@ -23,7 +23,7 @@
     <ul class="ch-grid">
       <% if @president %>
         <li>
-          <div class="ch-item" <% if @president.img_url != '' %>style="background-image:url('<%= @president.img_url %>')"<% end %>>
+          <div class="ch-item" <% if @president.img_url %>style="background-image:url('<%= @president.img_url %>')"<% end %>>
             <div class="ch-info">
               <h3><%= @president.name %></h3>
               <p><%= @president.position %></p>
@@ -33,7 +33,7 @@
       <% end %>
       <% if @vp_of_operations %>
         <li>
-          <div class="ch-item" <% if @vp_of_operations.img_url != '' %>style="background-image:url('<%= @vp_of_operations.img_url %>')"<% end %>>
+          <div class="ch-item" <% if @vp_of_operations.img_url %>style="background-image:url('<%= @vp_of_operations.img_url %>')"<% end %>>
             <div class="ch-info">
               <h3><%= @vp_of_operations.name %></h3>
               <p><%= @vp_of_operations.position %></p>
@@ -43,7 +43,7 @@
       <% end %>
       <% if @vp_of_training_and_development %>
         <li>
-          <div class="ch-item" <% if @vp_of_training_and_development.img_url != '' %>style="background-image:url('<%= @vp_of_training_and_development.img_url %>')"<% end %>>
+          <div class="ch-item" <% if @vp_of_training_and_development.img_url %>style="background-image:url('<%= @vp_of_training_and_development.img_url %>')"<% end %>>
             <div class="ch-info">
               <h3><%= @vp_of_training_and_development.name %></h3>
               <p><%= @vp_of_training_and_development.position %></p>
@@ -53,7 +53,7 @@
       <% end %>
       <% if @vp_of_marketing_and_finance %>
         <li>
-          <div class="ch-item" <% if @vp_of_marketing_and_finance.img_url != '' %>style="background-image:url('<%= @vp_of_marketing_and_finance.img_url %>')"<% end %>>
+          <div class="ch-item" <% if @vp_of_marketing_and_finance.img_url %>style="background-image:url('<%= @vp_of_marketing_and_finance.img_url %>')"<% end %>>
             <div class="ch-info">
               <h3><%= @vp_of_marketing_and_finance.name %></h3>
               <p><%= @vp_of_marketing_and_finance.position %></p>
@@ -63,7 +63,7 @@
       <% end %>
       <% @project_managers.each do |project_manager| %>
         <li>
-          <div class="ch-item" <% if project_manager.img_url != '' %>style="background-image:url('<%= project_manager.img_url %>')"<% end %>>
+          <div class="ch-item" <% if project_manager.img_url %>style="background-image:url('<%= project_manager.img_url %>')"<% end %>>
             <div class="ch-info">
               <h3><%= project_manager.name %></h3>
               <p><%= project_manager.position %></p>

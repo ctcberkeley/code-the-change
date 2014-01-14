@@ -13,3 +13,15 @@ events = [
 events.each do |title, start_time, end_time, location, description, url|
   Event.create(:title => title, :start_time => start_time, :end_time => end_time, :location => location, :description => description, :url => url)
 end
+
+
+officers = [
+  [ "Michael Lannin", "President" ],
+  [ "Paulina Ramos", "VP of Operations" ],
+  [ "Nick Freeman", "VP of Training & Development" ],
+  [ "Christine Loh", "VP of Marketing & Finance" ]
+]
+
+officers.each do |name, position|
+  Officer.create(:name => name, :position => position)
+end
