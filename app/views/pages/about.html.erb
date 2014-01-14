@@ -43,7 +43,7 @@
       <% end %>
       <% if @vp_of_training_and_development %>
         <li>
-          <div class="ch-item" <% if @vp_of_training_and_development != '' %>style="background-image:url('<%= @vp_of_training_and_development.img_url %>')"<% end %>>
+          <div class="ch-item" <% if @vp_of_training_and_development.img_url != '' %>style="background-image:url('<%= @vp_of_training_and_development.img_url %>')"<% end %>>
             <div class="ch-info">
               <h3><%= @vp_of_training_and_development.name %></h3>
               <p><%= @vp_of_training_and_development.position %></p>
