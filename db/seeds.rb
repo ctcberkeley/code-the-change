@@ -21,14 +21,14 @@ end
 Officer.delete_all
 
 officers = [
-  { :name => "Michael Lannin", :position => "President" },
-  { :name => "Paulina Ramos", :position => "VP of Operations" },
-  { :name => "Nick Freeman", :position => "VP of Training & Development" },
-  { :name => "Christine Loh", :position => "VP of Marketing & Finance" }
+  { :name => "Michael Lannin", :position => "President", :img_url => "" },
+  { :name => "Paulina Ramos", :position => "VP of Operations", :img_url => "" },
+  { :name => "Nick Freeman", :position => "VP of Training & Development", :img_url => "" },
+  { :name => "Christine Loh", :position => "VP of Marketing & Finance", :img_url => "" }
 ]
 
 officers.each do |officer|
-  Officer.create(:name => officer[:name], :position => officer[:position])
+  Officer.create(:name => officer[:name], :position => officer[:position], :img_url => officer[:img_url])
 end
 
 # Terms
