@@ -9,8 +9,8 @@
     <table class="table">
       <tr>
         <th>Title</th>
-        <th>Start</th>
-        <th>End</th>
+        <th>Start Time</th>
+        <th>End Time</th>
         <th>Location</th>
         <th>Description</th>
         <th>URL</th>
@@ -20,8 +20,8 @@
       <% @events.each do |event| %>
         <tr>
           <td><%= event.title %></td>
-          <td><%= event.start %></td>
-          <td><%= event.end %></td>
+          <td><%= event.start_time %></td>
+          <td><%= event.end_time %></td>
           <td><%= event.location %></td>
           <td><%= event.description %></td>
           <td><%= event.url %></td>

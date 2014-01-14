@@ -8,7 +8,7 @@ class PagesController < ApplicationController
     time = Time.now
 
     @events.each do |event|
-      if event.end > time
+      if event.end_time > time
         @upcoming_events.push(event)
       else
         @past_events.push(event)
