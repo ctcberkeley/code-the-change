@@ -5,7 +5,7 @@
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Code the Change" %>">
     <%= csrf_meta_tags %>
 
-    <title><%= content_for?(:title) ? yield(:title) : "Code the Change" %></title>
+    <title><%= content_for?(:title) ? yield(:title) + " | Code the Change" : "Code the Change" %></title>
 
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   </head>
