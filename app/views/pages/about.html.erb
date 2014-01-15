@@ -63,7 +63,7 @@
       <% end %>
       <% @project_managers.each do |project_manager| %>
         <li>
-          <div class="ch-item" <% if project_manager.img_url %>style="background-image:url('<%= project_manager.img_url %>')"<% end %>>
+          <div class="ch-item" <% if project_manager.img_url != "" %>style="background-image:url('<%= project_manager.img_url %>')"<% end %>>
             <div class="ch-info">
               <h3><%= project_manager.name %></h3>
               <p><%= project_manager.position %></p>
