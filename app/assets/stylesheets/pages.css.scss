@@ -28,7 +28,7 @@
  */
 
 .hero {
-  padding-top: 40px;
+  padding: 40px 0 30px;
   text-align: center;
   img {
     margin: 0 auto;
@@ -41,6 +41,21 @@
   .hero {
     font-size: 21px;
   }
+}
+
+/*
+ * Callout
+ *
+ * Message to have nonprofits contact us
+ */
+
+.callout {
+  padding: 15px 20px;
+  color: #777;
+  background-color: #fafafa;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
 }
 
 /*
