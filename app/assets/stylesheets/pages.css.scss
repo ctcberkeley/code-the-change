@@ -44,13 +44,29 @@
 }
 
 /*
+ * Divisions
+ *
+ * A showcase of our different divisions
+ */
+
+.divisions {
+  padding-top: 40px;
+  .division {
+    padding-bottom: 30px;
+    .img-division {
+      margin: 20px auto;
+    }
+  }
+}
+
+/*
  * Events
  *
  * Upcoming and past events
  */
 
 .events {
-  padding-bottom: 80px;
+  padding: 40px 0 80px;
 }
 
 /*
@@ -61,13 +77,13 @@
 
 .about {
   padding: 30px 0 30px;
-  .about-image {
+  .img-about {
     margin: 30px auto 0;
   }
 }
 @media (min-width: 992px) {
   .about {
-    .about-image {
+    .img-about {
       margin: 0 auto;
     }
   }
