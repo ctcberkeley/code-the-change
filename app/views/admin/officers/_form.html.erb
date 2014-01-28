@@ -4,9 +4,9 @@
     <div id="error_explanation">
       <h2><%= pluralize(@officer.errors.count, "error") %> prohibited this officer from being saved:</h2>
       <ul>
-      <% @officer.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @officer.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
