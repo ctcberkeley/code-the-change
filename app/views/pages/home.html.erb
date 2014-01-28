@@ -76,7 +76,7 @@
           </div>
           <div id="<%= past_event.id %>" class="panel-collapse collapse">
             <div class="panel-body">
-              <%= past_event.description %>
+              <%= past_event.description %> <%= link_to 'Facebook Event', past_event.url, target: "_blank" %>
             </div>
           </div>
         </div>
