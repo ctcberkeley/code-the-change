@@ -46,16 +46,6 @@
           </div>
         </li>
       <% end %>
-      <% if @vp_of_training_and_development %>
-        <li>
-          <div class="ch-item" <% if @vp_of_training_and_development.img_url != "" %>style="background-image:url('<%= @vp_of_training_and_development.img_url %>')"<% end %>>
-            <div class="ch-info">
-              <h3><%= @vp_of_training_and_development.name %></h3>
-              <p><%= @vp_of_training_and_development.position %></p>
-            </div>
-          </div>
-        </li>
-      <% end %>
       <% if @vp_of_marketing_and_finance %>
         <li>
           <div class="ch-item" <% if @vp_of_marketing_and_finance.img_url != "" %>style="background-image:url('<%= @vp_of_marketing_and_finance.img_url %>')"<% end %>>
@@ -72,6 +62,16 @@
             <div class="ch-info">
               <h3><%= project_manager.name %></h3>
               <p><%= project_manager.position %></p>
+            </div>
+          </div>
+        </li>
+      <% end %>
+      <% @decal_assistants.each do |decal_assistant| %>
+        <li>
+          <div class="ch-item" <% if decal_assistant.img_url != "" %>style="background-image:url('<%= decal_assistant.img_url %>')"<% end %>>
+            <div class="ch-info">
+              <h3><%= decal_assistant.name %></h3>
+              <p><%= decal_assistant.position %></p>
             </div>
           </div>
         </li>
