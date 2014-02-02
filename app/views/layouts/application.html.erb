@@ -10,7 +10,14 @@
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   </head>
   <body>
-    <%= render 'layouts/header' %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <% if admin_signed_in? %>
+      <%= render 'layouts/headerSecret' %>
+    <% else %>
+      <%= render 'layouts/header' %>
+    <% end %>
+
     
     <div class="main">
       <%= render 'layouts/messages' %>
