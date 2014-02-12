@@ -12,12 +12,8 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <% if admin_signed_in? %>
-      <%= render 'layouts/headerSecret' %>
-    <% else %>
-      <%= render 'layouts/header' %>
-    <% end %>
 
+    <%= render 'layouts/header' %>
     
     <div class="main">
       <%= render 'layouts/messages' %>

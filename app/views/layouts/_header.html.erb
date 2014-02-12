@@ -14,6 +14,12 @@
         <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "About", about_path %></li>
         <li class="<%= 'active' if current_page?(projects_path) %>"><%= link_to "Projects", projects_path %></li>
       </ul>
+      <% if admin_signed_in? %>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="<%= 'active' if current_page?(projects_path) %>"><%= link_to "Secret!", about_path %></li>
+          <li class="<%= 'active' if current_page?(projects_path) %>"><%= link_to "Sign out", destroy_admin_session_path, :method => :delete %></li>
+        </ul>
+      <% end %>
     </nav>
   </div>
 </header>
