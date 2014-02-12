@@ -1,6 +1,6 @@
 class Admin::EventsController < ApplicationController
 
-  before_filter :authenticate
+  before_filter :authenticate_admin!
 
   def index
     @events = Event.all
