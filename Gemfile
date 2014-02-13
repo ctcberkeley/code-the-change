@@ -53,6 +53,9 @@ end
 # Use devise for login
 gem 'devise'
 
+# Use CanCan for authorization
+gem 'cancan'
+
 # Specify Ruby Version
 ruby "2.1.0"
 
