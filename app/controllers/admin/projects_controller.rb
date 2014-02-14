@@ -1,6 +1,6 @@
 class Admin::ProjectsController < ApplicationController
 
-  before_filter :authenticate_admin!
+  before_filter :authenticate
 
   def index
     @projects = Project.all

@@ -1,6 +1,6 @@
 class Admin::TermsController < ApplicationController
 
-  before_filter :authenticate_admin!
+  before_filter :authenticate
 
   def index
     @terms = Term.all
