@@ -43,6 +43,7 @@ class PagesController < ApplicationController
 
   def course
     @lessons = Lesson.all
+    @lessons.sort! { |a,b| a.week <=> b.week }
     @terms = Term.all
     @terms.sort! { |a,b| (a.year == b.year) ? a.season <=> b.season : b.year <=> a.year }
     @term = @terms.first
