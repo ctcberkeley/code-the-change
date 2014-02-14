@@ -1,0 +1,13 @@
+<p>
+  <strong>Title:</strong>
+  <%= lecture.title %>
+</p>
+
+<p>
+  <strong>URL:</strong>
+  <%= lecture.url %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Lecture', [:admin, lecture.lesson, lecture], method: :delete, data: { confirm: 'Are you sure?' } %>
+</p>

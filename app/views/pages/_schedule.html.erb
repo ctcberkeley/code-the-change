@@ -5,6 +5,7 @@
       <th>Week</th>
       <th>Date</th>
       <th>Topic</th>
+      <th>Slides</th>
       <th>Assignment</th>
     </tr>      
     <% @lessons.each do |lesson| %>
@@ -12,6 +13,11 @@
         <td><%= lesson.week %></td>
         <td><%= lesson.date.strftime("%b %e") %></td>
         <td><%= lesson.topic %></td>
+        <td>
+          <% lesson.lectures.each do |lecture| %>
+            <%= link_to lecture.title, lecture.url %>
+          <% end %>
+        </td>
         <td>
           <% lesson.assignments.each do |assignment| %>
             <%= link_to assignment.title, [:admin, assignment.lesson, assignment] %>

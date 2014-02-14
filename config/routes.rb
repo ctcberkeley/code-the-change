@@ -13,6 +13,7 @@ CodeTheChange::Application.routes.draw do
     resources :terms, :events, :officers, :projects
 
     resources :lessons do
+      resources :lectures
       resources :assignments
     end
   end
