@@ -21,45 +21,13 @@
     <ul class="nav nav-tabs">
       <li class="active"><a href="#schedule" data-toggle="tab">Schedule</a></li>
       <li><a href="#syllabus" data-toggle="tab">Syllabus</a></li>
-      <li><a href="#staff" data-toggle="tab">Staff</a></li>
     </ul>
-
     <div class="tab-content">
       <div class="tab-pane active" id="schedule">
-        <h2>Schedule</h2>
-        <table class="table table-striped">
-          <tr>
-            <th>Week</th>
-            <th>Date</th>
-            <th>Topic</th>
-            <th>Slides</th>
-            <th>Assignment</th>
-          </tr>
-         
-          <% @lessons.each do |lesson| %>
-            <tr>
-              <td><%= lesson.week %></td>
-              <td><%= lesson.date.strftime("%b %e") %></td>
-              <td><%= lesson.topic %></td>
-              <td>
-                <% if lesson.slides != "" %>
-                  <%= link_to "Slides", lesson.slides %>
-                <% end %>
-              </td>
-              <td>
-                <% lesson.assignments.each do |assignment| %>
-                  <%= link_to assignment.title, [:admin, assignment.lesson, assignment] %>
-                <% end %>
-              </td>
-            </tr>
-          <% end %>
-        </table>
+        <%= render 'pages/schedule' %>
       </div>
       <div class="tab-pane" id="syllabus">
-        <h2>Syllabus</h2>
-      </div>
-      <div class="tab-pane" id="staff">
-        <h2>Staff</h2>
+        <%= render 'pages/syllabus' %>
       </div>
     </div>
   </div>

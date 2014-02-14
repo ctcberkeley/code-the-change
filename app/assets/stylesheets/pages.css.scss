@@ -250,7 +250,7 @@
 /*
  * Course
  *
- * Tabbed sections for course information
+ * Header section with basic course information
  */
 
 .course {
@@ -262,6 +262,21 @@
     p {
     margin-bottom: 0;
     font-size: 16px;
+    }
+  }
+}
+
+/*
+ * Tabs
+ *
+ * Tabbed sections for course content
+ */
+
+.tabs {
+  padding-bottom: 80px;
+  .syllabus {
+    h4 {
+      color: #428bca;
     }
   }
 }
