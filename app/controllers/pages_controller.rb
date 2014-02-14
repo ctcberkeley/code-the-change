@@ -41,4 +41,7 @@ class PagesController < ApplicationController
     @terms.sort! { |a,b| (a.year == b.year) ? a.season <=> b.season : b.year <=> a.year }
   end
 
+  def course
+  end
+
 end
