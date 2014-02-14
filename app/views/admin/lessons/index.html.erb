@@ -1,0 +1,31 @@
+<div class="section">
+  <div class="container">
+    <h1>Lessons</h1>
+
+    <p>
+      <%= link_to 'New Lesson', new_admin_lesson_path, { class: "btn btn-default" } %>
+    </p>
+
+    <table class="table">
+      <tr>
+        <th>Week</th>
+        <th>Date</th>
+        <th>Topic</th>
+        <th>Slides</th>
+        <th>Actions</th>
+      </tr>
+     
+      <% @lessons.each do |lesson| %>
+        <tr>
+          <td><%= lesson.week %></td>
+          <td><%= lesson.date.strftime("%b %e") %></td>
+          <td><%= lesson.topic %></td>
+          <td><%= lesson.slides %></td>
+          <td><%= link_to 'Show', admin_lesson_path(lesson) %> | 
+              <%= link_to 'Edit', edit_admin_lesson_path(lesson) %> | 
+              <%= link_to 'Destroy', admin_lesson_path(lesson), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

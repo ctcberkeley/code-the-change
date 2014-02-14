@@ -1,0 +1,27 @@
+<div class="section">
+  <div class="container">
+    <h1>Lesson</h1>
+
+    <p>
+      <strong>Week:</strong>
+      <%= @lesson.week %>
+    </p>
+     
+    <p>
+      <strong>Date:</strong>
+      <%= @lesson.date.strftime("%b %e") %>
+    </p>
+
+    <p>
+      <strong>Topic:</strong>
+      <%= @lesson.topic %>
+    </p>
+
+    <p>
+      <strong>Slides:</strong>
+      <%= @lesson.slides %>
+    </p>
+
+    <%= link_to 'Back', admin_lessons_path %> | <%= link_to 'Edit', edit_admin_lesson_path(@lesson) %>
+  </div>
+</div>

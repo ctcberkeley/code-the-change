@@ -9,7 +9,7 @@ CodeTheChange::Application.routes.draw do
   get '/projects', to: 'pages#projects'
 
   namespace :admin do
-    resources :terms, :events, :officers, :projects
+    resources :terms, :events, :officers, :projects, :lessons
   end
 
   # You can have the root of your site routed with "root"

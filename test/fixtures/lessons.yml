@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  week: 1
+  date: 2014-02-13
+  topic: MyString
+  slides: MyString
+
+two:
+  week: 1
+  date: 2014-02-13
+  topic: MyString
+  slides: MyString

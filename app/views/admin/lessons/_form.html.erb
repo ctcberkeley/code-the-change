@@ -1,0 +1,38 @@
+<%= form_for [:admin, @lesson] do |f| %>
+  
+  <% if @lesson.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
+      <ul>
+      <% @lesson.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :week %><br>
+    <%= f.select :week, ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"] %>
+  </p>
+
+  <p>
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </p>
+
+  <p>
+    <%= f.label :topic %><br>
+    <%= f.text_field :topic %>
+  </p>
+
+  <p>
+    <%= f.label :slides %><br>
+    <%= f.text_field :slides %>
+  </p>
+ 
+  <p>
+    <%= f.submit :class => "btn btn-default" %>
+  </p>
+  
+<% end %>
