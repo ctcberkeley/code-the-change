@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140214103753) do
+ActiveRecord::Schema.define(version: 20140214124948) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,7 +70,6 @@ ActiveRecord::Schema.define(version: 20140214103753) do
     t.integer  "week"
     t.date     "date"
     t.string   "topic"
-    t.string   "slides"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
