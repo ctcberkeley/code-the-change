@@ -1,35 +1,66 @@
 <% title "About" %>
 <% description "The Code the Change course aims to teach students web technologies by working on real­ world projects with non­profit and social­ sector partners." %>
 
-<div class="schedule">
+<div class="course">
   <div class="container">
-    <h2>Schedule</h2>
-    <table class="table table-striped">
-      <tr>
-        <th>Week</th>
-        <th>Date</th>
-        <th>Topic</th>
-        <th>Slides</th>
-        <th>Assignment</th>
-      </tr>
-     
-      <% @lessons.each do |lesson| %>
-        <tr>
-          <td><%= lesson.week %></td>
-          <td><%= lesson.date.strftime("%b %e") %></td>
-          <td><%= lesson.topic %></td>
-          <td>
-            <% if lesson.slides != "" %>
-              <%= link_to "Slides", lesson.slides %>
-            <% end %>
-          </td>
-          <td>
-            <% lesson.assignments.each do |assignment| %>
-              <%= link_to assignment.title, [:admin, assignment.lesson, assignment] %>
-            <% end %>
-          </td>
-        </tr>
-      <% end %>
-    </table>
+    <div class="row">
+      <div class="col-md-3 hidden-xs hidden-sm">
+        <%= image_tag("code-the-change-logo-with-text.png", class: "img-responsive") %>
+      </div>
+      <div class="col-md-9 course-info">
+        <h1>Code the Change DeCal</h1>
+        <p>Computer Science 98/198</p>
+        <p><%= @term.season + " " + @term.year.to_s %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#schedule" data-toggle="tab">Schedule</a></li>
+      <li><a href="#syllabus" data-toggle="tab">Syllabus</a></li>
+      <li><a href="#staff" data-toggle="tab">Staff</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane active" id="schedule">
+        <h2>Schedule</h2>
+        <table class="table table-striped">
+          <tr>
+            <th>Week</th>
+            <th>Date</th>
+            <th>Topic</th>
+            <th>Slides</th>
+            <th>Assignment</th>
+          </tr>
+         
+          <% @lessons.each do |lesson| %>
+            <tr>
+              <td><%= lesson.week %></td>
+              <td><%= lesson.date.strftime("%b %e") %></td>
+              <td><%= lesson.topic %></td>
+              <td>
+                <% if lesson.slides != "" %>
+                  <%= link_to "Slides", lesson.slides %>
+                <% end %>
+              </td>
+              <td>
+                <% lesson.assignments.each do |assignment| %>
+                  <%= link_to assignment.title, [:admin, assignment.lesson, assignment] %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+      <div class="tab-pane" id="syllabus">
+        <h2>Syllabus</h2>
+      </div>
+      <div class="tab-pane" id="staff">
+        <h2>Staff</h2>
+      </div>
+    </div>
   </div>
 </div>

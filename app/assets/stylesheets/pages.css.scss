@@ -246,3 +246,22 @@
 .projects {
   padding: 30px 0 80px;
 }
+
+/*
+ * Course
+ *
+ * Tabbed sections for course information
+ */
+
+.course {
+  padding: 30px 0 30px;
+  .course-info {
+    h1 {
+      margin-top: 10px;
+    }    
+    p {
+    margin-bottom: 0;
+    font-size: 16px;
+    }
+  }
+}
