@@ -42,6 +42,7 @@ class PagesController < ApplicationController
   end
 
   def course
+    @lessons = Lesson.all
   end
 
 end

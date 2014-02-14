@@ -1,0 +1,7 @@
+<div class="section">
+  <div class="container">
+    <h1><%= @assignment.title %></h1>
+    <p><strong>Due:</strong> <%= @assignment.due.strftime("%B %d, %I:%M%p") %></p>
+    <p><%= @assignment.description %></p>
+  </div>
+</div>

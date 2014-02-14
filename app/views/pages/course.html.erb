@@ -1,0 +1,31 @@
+<% title "About" %>
+<% description "The Code the Change course aims to teach students web technologies by working on real­ world projects with non­profit and social­ sector partners." %>
+
+<div class="schedule">
+  <div class="container">
+    <h2>Schedule</h2>
+    <table class="table table-striped">
+      <tr>
+        <th>Week</th>
+        <th>Date</th>
+        <th>Topic</th>
+        <th>Slides</th>
+        <th>Assignment</th>
+      </tr>
+     
+      <% @lessons.each do |lesson| %>
+        <tr>
+          <td><%= lesson.week %></td>
+          <td><%= lesson.date.strftime("%b %e") %></td>
+          <td><%= lesson.topic %></td>
+          <td><%= link_to "Slides", lesson.slides unless !lesson.slides %></td>
+          <td>
+            <% lesson.assignments.each do |assignment| %>
+              <%= link_to assignment.title, [:admin, assignment.lesson, assignment] %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

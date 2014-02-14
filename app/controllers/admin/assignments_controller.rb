@@ -12,5 +12,10 @@ class Admin::AssignmentsController < ApplicationController
     @assignment.destroy
     redirect_to admin_lesson_path(@lesson)
   end
+
+  def show
+    @lesson = Lesson.find(params[:lesson_id])
+    @assignment = @lesson.assignments.find(params[:id])
+  end
   
 end
