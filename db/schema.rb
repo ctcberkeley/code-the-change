@@ -70,7 +70,6 @@ ActiveRecord::Schema.define(version: 20140214124948) do
     t.integer  "week"
     t.date     "date"
     t.string   "topic"
-    t.string   "slides"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
