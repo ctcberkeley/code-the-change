@@ -11,7 +11,6 @@
         <th>Week</th>
         <th>Date</th>
         <th>Topic</th>
-        <th>Slides</th>
         <th>Actions</th>
       </tr>
      
@@ -20,7 +19,6 @@
           <td><%= lesson.week %></td>
           <td><%= lesson.date.strftime("%b %e") %></td>
           <td><%= lesson.topic %></td>
-          <td><%= lesson.slides %></td>
           <td><%= link_to 'Show', admin_lesson_path(lesson) %> | 
               <%= link_to 'Edit', edit_admin_lesson_path(lesson) %> | 
               <%= link_to 'Destroy', admin_lesson_path(lesson), method: :delete, data: { confirm: 'Are you sure?' } %></td>

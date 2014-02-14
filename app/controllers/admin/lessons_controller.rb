@@ -33,7 +33,7 @@ class Admin::LessonsController < ApplicationController
   def update
     @lesson = Lesson.find(params[:id])
 
-    if @lesson.update(params[:lesson].permit(:week, :date, :topic, :slides))
+    if @lesson.update(params[:lesson].permit(:week, :date, :topic))
       redirect_to admin_lessons_path
     else
       render 'edit'
@@ -49,7 +49,7 @@ class Admin::LessonsController < ApplicationController
 
   private
     def lesson_params
-      params.require(:lesson).permit(:week, :date, :topic, :slides)
+      params.require(:lesson).permit(:week, :date, :topic)
     end
 
 end
