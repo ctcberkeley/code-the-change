@@ -10,11 +10,10 @@ CodeTheChange::Application.routes.draw do
   get '/course', to: 'pages#course'
 
   namespace :admin do
-    resources :terms, :events, :officers, :projects
+    resources :terms, :events, :officers, :projects, :assignments
 
     resources :lessons do
       resources :lectures
-      resources :assignments
     end
   end
 

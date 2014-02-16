@@ -6,7 +6,6 @@
       <th>Date</th>
       <th>Topic</th>
       <th>Slides</th>
-      <th>Assignment</th>
     </tr>      
     <% @lessons.each do |lesson| %>
       <tr>
@@ -16,11 +15,6 @@
         <td>
           <% lesson.lectures.each do |lecture| %>
             <%= link_to lecture.title, lecture.url, target: "_blank" %>
-          <% end %>
-        </td>
-        <td>
-          <% lesson.assignments.each do |assignment| %>
-            <%= link_to assignment.title, [:admin, assignment.lesson, assignment] %>
           <% end %>
         </td>
       </tr>

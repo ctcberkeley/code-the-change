@@ -1,0 +1,27 @@
+<div class="section">
+  <div class="container">
+    <h1>Assignments</h1>
+     
+    <p>
+      <%= link_to 'New Assignment', new_admin_assignment_path, { class: "btn btn-default" } %>
+    </p>
+
+    <table class="table">
+      <tr>
+        <th>Title</th>
+        <th>URL</th>
+        <th>Actions</th>
+      </tr>
+     
+      <% @assignments.each do |assignment| %>
+        <tr>
+          <td><%= assignment.title %></td>
+          <td><%= assignment.url %></td>
+          <td><%= link_to 'Show', admin_assignment_path(assignment) %> | 
+              <%= link_to 'Edit', edit_admin_assignment_path(assignment) %> | 
+              <%= link_to 'Destroy', admin_assignment_path(assignment), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

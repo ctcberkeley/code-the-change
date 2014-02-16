@@ -1,7 +1,17 @@
 <div class="section">
   <div class="container">
-    <h1><%= @assignment.title %></h1>
-    <p><strong>Due:</strong> <%= @assignment.due.strftime("%B %d, %I:%M%p") %></p>
-    <p><%= @assignment.description %></p>
+    <h1>Assignment</h1>
+
+    <p>
+      <strong>Title:</strong>
+      <%= @assignment.title %>
+    </p>
+     
+    <p>
+      <strong>URL:</strong>
+      <%= @assignment.url %>
+    </p>
+
+    <%= link_to 'Back', admin_assignments_path %> | <%= link_to 'Edit', edit_admin_assignment_path(@assignment) %>
   </div>
 </div>
