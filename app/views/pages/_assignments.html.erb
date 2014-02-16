@@ -1,0 +1,8 @@
+<div class="assignments">
+  <h2>Assignments</h2>
+  <ul class="list-group">
+    <% @assignments.each do |assignment| %>
+      <li class="list-group-item"><%= link_to assignment.title, assignment.url, target: "_blank" %></li>
+    <% end %>
+  </ul>
+</div>
