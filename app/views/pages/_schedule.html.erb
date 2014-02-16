@@ -15,7 +15,7 @@
         <td><%= lesson.topic %></td>
         <td>
           <% lesson.lectures.each do |lecture| %>
-            <%= link_to lecture.title, lecture.url %>
+            <%= link_to lecture.title, lecture.url, target: "_blank" %>
           <% end %>
         </td>
         <td>
