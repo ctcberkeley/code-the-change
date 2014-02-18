@@ -274,6 +274,11 @@
 
 .tabs {
   padding-bottom: 80px;
+  .assignments {
+    .submission {
+      text-align: center;
+    }
+  }
   .course-information {
     h4 {
       color: #428bca;
