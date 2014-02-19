@@ -66,16 +66,6 @@
           </div>
         </li>
       <% end %>
-      <% @decal_assistants.each do |decal_assistant| %>
-        <li>
-          <div class="ch-item" <% if decal_assistant.img_url != "" %>style="background-image:url('<%= decal_assistant.img_url %>')"<% end %>>
-            <div class="ch-info">
-              <h3><%= decal_assistant.name %></h3>
-              <p><%= decal_assistant.position %></p>
-            </div>
-          </div>
-        </li>
-      <% end %>
     </ul>
   </div>
 </div>

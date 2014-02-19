@@ -22,16 +22,14 @@ class PagesController < ApplicationController
     @decal_assistants = []
 
     @officers.each do |officer|
-      if officer.position == 'President, DeCal Instructor'
+      if officer.position == 'President, Course Instructor'
         @president = officer
       elsif officer.position == 'VP of Operations'
         @vp_of_operations = officer
       elsif officer.position == 'VP of Marketing & Finance'
         @vp_of_marketing_and_finance = officer
-      elsif officer.position == 'Project Manager'
-        @project_managers.push(officer)
       else
-        @decal_assistants.push(officer)
+        @project_managers.push(officer)
       end
     end
   end
