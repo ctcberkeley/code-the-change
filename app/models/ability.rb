@@ -28,11 +28,5 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/ryanb/cancan/wiki/Defining-Abilities
-    admin ||= Admin.new # guest user (not logged in)
-    if admin.admin? # Admin user
-      can :manage, :all
-    else # Non-admin user
-      can :read, :all
-    end
   end
 end
