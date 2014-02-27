@@ -23,6 +23,12 @@
     <h2>Add slides:</h2>
     <%= render 'admin/lectures/form' %>
 
+    <h2>Tutorials</h2>
+    <%= render @lesson.tutorials %>
+
+    <h2>Add tutorials:</h2>
+    <%= render 'admin/tutorials/form' %>
+
     <%= link_to 'Back', admin_lessons_path %> | <%= link_to 'Edit', edit_admin_lesson_path(@lesson) %>
   </div>
 </div>

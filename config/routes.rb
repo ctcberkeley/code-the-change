@@ -14,6 +14,7 @@ CodeTheChange::Application.routes.draw do
 
     resources :lessons do
       resources :lectures
+      resources :tutorials
     end
   end
 
