@@ -6,6 +6,7 @@
       <th>Date</th>
       <th>Topic</th>
       <th>Slides</th>
+      <th>Tutorials</th>
     </tr>      
     <% @lessons.each do |lesson| %>
       <tr>
@@ -15,6 +16,11 @@
         <td>
           <% lesson.lectures.each do |lecture| %>
             <%= link_to lecture.title, lecture.url, target: "_blank" %>
+          <% end %>
+        </td>
+        <td>
+          <% lesson.tutorials.each do |tutorial| %>
+            <%= link_to tutorial.title, tutorial.url, target: "_blank" %>
           <% end %>
         </td>
       </tr>
