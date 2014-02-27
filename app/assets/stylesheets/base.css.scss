@@ -4,11 +4,11 @@
  * Universal elements across the site
  */
 
+/* Layout */
 html,
 body {
   height: 100%;
 }
-
 .main {
   min-height: 100%;
   height: auto;
@@ -16,10 +16,12 @@ body {
   padding: 50px 0 100px;
 }
 
+/* Sections */
 .section {
   padding-bottom: 40px;
 }
 
+/* Subheaders */
 .subheader {
   text-transform: uppercase;
   color: #aaa;
@@ -30,6 +32,21 @@ body {
   letter-spacing: 0.1em;
 }
 
+/* Messages */
 .messages {
   padding-top: 20px;
+}
+
+/* Panels */
+.ctc-panel-group {
+  a {
+    text-decoration: none;
+    .panel-title {
+      margin-bottom: 3px;
+    }
+  }
+  p {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
 }
