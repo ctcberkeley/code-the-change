@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
 
+  before_filter :authenticate, only: [:admin]
+
   def home
     @events = Event.all
     @events.sort! { |a,b| b.start_time <=> a.start_time }
@@ -49,6 +51,9 @@ class PagesController < ApplicationController
 
     @assignments = Assignment.all
     @assignments.sort! { |a,b| a.title <=> b.title }
+  end
+
+  def admin
   end
 
 end
