@@ -1,33 +1,42 @@
 <div class="section">
   <div class="container">
-    <h1>Lesson</h1>
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Lesson Details</h3>
+        <hr>
+        <p>
+          <strong>Week:</strong>
+          <%= @lesson.week %>
+        </p>
+         
+        <p>
+          <strong>Date:</strong>
+          <%= @lesson.date.strftime("%b %e") %>
+        </p>
 
-    <p>
-      <strong>Week:</strong>
-      <%= @lesson.week %>
-    </p>
-     
-    <p>
-      <strong>Date:</strong>
-      <%= @lesson.date.strftime("%b %e") %>
-    </p>
+        <p>
+          <strong>Topic:</strong>
+          <%= @lesson.topic %>
+        </p>
+      </div>
+      
+      <div class="col-md-4">
+        <h3>Slides</h3>
+        <hr>
+        <%= render @lesson.lectures %>
 
-    <p>
-      <strong>Topic:</strong>
-      <%= @lesson.topic %>
-    </p>
+        <h4>Add slides:</h4>
+        <%= render 'admin/lectures/form' %>
+      </div>
+      <div class="col-md-4">
+        <h3>Tutorials</h3>
+        <hr>
+        <%= render @lesson.tutorials %>
 
-    <h2>Slides</h2>
-    <%= render @lesson.lectures %>
-
-    <h2>Add slides:</h2>
-    <%= render 'admin/lectures/form' %>
-
-    <h2>Tutorials</h2>
-    <%= render @lesson.tutorials %>
-
-    <h2>Add tutorials:</h2>
-    <%= render 'admin/tutorials/form' %>
+        <h4>Add tutorials:</h4>
+        <%= render 'admin/tutorials/form' %>
+      </div>
+    </div>
 
     <%= link_to 'Back', admin_lessons_path %> | <%= link_to 'Edit', edit_admin_lesson_path(@lesson) %>
   </div>
