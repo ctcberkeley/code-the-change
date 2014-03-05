@@ -1,4 +1,4 @@
-<header class="navbar navbar-inverse navbar-fixed-top ctc-navbar">
+<header class="navbar navbar-inverse navbar-fixed-top ctc-navbar" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -17,8 +17,8 @@
       </ul>
       <% if admin_signed_in? %>
         <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin <b class="caret"></b></a>
+          <li class="dropdown <%= 'active' if current_page?(admin_path) %>">
+            <a href=<%= admin_path %> class="dropdown-toggle">Admin <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li class="<%= 'active' if current_page?(admin_events_path) %>"><%= link_to "Events", admin_events_path %></li>
               <li class="<%= 'active' if current_page?(admin_officers_path) %>"><%= link_to "Officers", admin_officers_path %></li>
