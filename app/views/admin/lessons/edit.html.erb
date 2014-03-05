@@ -1,3 +1,14 @@
+<div class="breadcrumbs">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><%= link_to "Admin", admin_path %></li>
+      <li><%= link_to "Lessons", admin_lessons_path %></li>
+      <li><%= link_to "Lesson", admin_lesson_path(@lesson) %></li>
+      <li class="active">Edit</li>
+    </ol>
+  </div>
+</div>
+
 <div class="section">
   <div class="container">
     <h1>Edit Lesson</h1>
