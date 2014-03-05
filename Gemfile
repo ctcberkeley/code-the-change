@@ -50,11 +50,8 @@ group :development do
   gem 'rails_layout'
 end
 
-# Use devise for login
+# Use devise for authentication
 gem 'devise'
-
-# Use CanCan for authorization
-gem 'cancan'
 
 # Specify Ruby Version
 ruby "2.1.0"
