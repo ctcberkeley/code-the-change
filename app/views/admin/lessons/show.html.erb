@@ -31,20 +31,24 @@
       </div>
       
       <div class="col-md-4">
-        <h3>Slides</h3>
-        <hr>
-        <%= render @lesson.lectures %>
+        <div class="well">
+          <h3>Slides</h3>
+          <hr>
+          <%= render @lesson.lectures %>
 
-        <h4>Add slides:</h4>
-        <%= render 'admin/lectures/form' %>
+          <h4>Add slides:</h4>
+          <%= render 'admin/lectures/form' %>
+        </div>
       </div>
       <div class="col-md-4">
-        <h3>Tutorials</h3>
-        <hr>
-        <%= render @lesson.tutorials %>
+        <div class="well">
+          <h3>Tutorials</h3>
+          <hr>
+          <%= render @lesson.tutorials %>
 
-        <h4>Add tutorials:</h4>
-        <%= render 'admin/tutorials/form' %>
+          <h4>Add tutorials:</h4>
+          <%= render 'admin/tutorials/form' %>
+        </div>
       </div>
     </div>
 
