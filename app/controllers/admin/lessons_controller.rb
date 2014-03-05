@@ -1,6 +1,6 @@
 class Admin::LessonsController < ApplicationController
   
-  before_filter :authenticate
+  before_filter :authenticate_admin!
 
   def index
     @lessons = Lesson.all
