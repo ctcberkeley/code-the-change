@@ -22,6 +22,6 @@
       <%= @assignment.url %>
     </p>
 
-    <%= link_to 'Back', admin_assignments_path %> | <%= link_to 'Edit', edit_admin_assignment_path(@assignment) %>
+    <%= link_to 'Edit', edit_admin_assignment_path(@assignment), { class: "btn btn-default" } %>
   </div>
 </div>

@@ -27,6 +27,6 @@
       <%= @officer.img_url %>
     </p>
 
-    <%= link_to 'Back', admin_officers_path %> | <%= link_to 'Edit', edit_admin_officer_path(@officer) %>
+    <%= link_to 'Edit', edit_admin_officer_path(@officer), { class: "btn btn-default" } %>
   </div>
 </div>

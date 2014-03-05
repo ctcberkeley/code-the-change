@@ -42,6 +42,6 @@
       <%= @event.url %>
     </p>
 
-    <%= link_to 'Back', admin_events_path %> | <%= link_to 'Edit', edit_admin_event_path(@event) %>
+    <%= link_to 'Edit', edit_admin_event_path(@event), { class: "btn btn-default" } %>
   </div>
 </div>
