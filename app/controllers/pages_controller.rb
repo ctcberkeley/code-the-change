@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  before_filter :authenticate, only: [:admin]
+  before_filter :authenticate_admin!, only: [:admin]
 
   def home
     @events = Event.all
