@@ -24,7 +24,7 @@ class PagesController < ApplicationController
     @decal_assistants = []
 
     @officers.each do |officer|
-      if officer.position == 'President, Course Instructor'
+      if officer.position == 'President'
         @president = officer
       elsif officer.position == 'VP of Operations'
         @vp_of_operations = officer
