@@ -1,0 +1,24 @@
+<div class="event row">
+  <div class="col-xs-1 date-wrapper">
+    <p class="date">
+      <span class="month"><%= event.start_time.strftime("%b") %></span>
+      <span class="day"><%= event.start_time.strftime("%d") %></span>
+    </p>
+  </div>
+  <div class="col-xs-11">
+    <h4 class="title"><%= link_to event.title, event.url, target: "_blank" %></h4>
+    <p>
+      <span class="time">
+        <span class="glyphicon glyphicon-time"></span>
+        <%= event.start_time.strftime("%I:%M%p") %> - <%= event.end_time.strftime("%I:%M%p") %>
+      </span>
+      <span class="location">
+        <span class="glyphicon glyphicon-map-marker"></span>
+        <%= event.location %>
+      </span>
+    </p>
+    <p>
+      <%= event.description %>
+    </p>
+  </div>
+</div>

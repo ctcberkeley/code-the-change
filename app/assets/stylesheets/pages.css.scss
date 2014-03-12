@@ -58,6 +58,41 @@
 
 .events {
   padding: 40px 0 80px;
+  color: #444444;
+  .event {
+    margin-left: 0;
+    padding-bottom: 15px;
+    font-size: 13px;
+    .date-wrapper {
+      padding: 0;
+      .date {
+        background: #f5f5f5;
+        width: 40px;
+        height: 50px;
+        text-align: center;
+        margin: 0 auto;
+        .month {
+          background: #027ac6;
+          color: #ffffff;
+          display: block;
+          text-transform: uppercase;
+          font-weight: 300;
+        }
+        .day {
+          display: block;
+          padding-top: 5px;
+          font-size: 14px;
+        }
+      }
+    }
+    .title {
+      margin-top: 0;
+      font-size: 20px;
+    }
+    .time {
+      margin-right: 5px;
+    }
+  }
 }
 
 /*
