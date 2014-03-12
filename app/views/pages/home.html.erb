@@ -52,6 +52,9 @@
   <div class="container">
     <h2>Events</h2>
     <h3 class="subheader">Upcoming Events</h3>
+    <% if @upcoming_events.length == 0 %>
+      <p class="message">There are currently no upcoming events.</p>
+    <% end %>
     <% @upcoming_events.each do |upcoming_event| %>
       <%= render 'pages/event', :event => upcoming_event %>
     <% end %>
