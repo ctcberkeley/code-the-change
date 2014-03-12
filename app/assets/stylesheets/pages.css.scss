@@ -11,16 +11,11 @@
 .hero {
   padding: 40px 0 30px;
   text-align: center;
-  img {
-    margin: 0 auto;
-  }
   .container {
     position: relative;
-  }
-}
-@media (min-width: 768px) {
-  .hero {
-    font-size: 21px;
+    img {
+      margin: 0 auto;
+    }
   }
 }
 
