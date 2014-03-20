@@ -31,7 +31,7 @@ class Admin::OfficersController < ApplicationController
   def update
     @officer = Officer.find(params[:id])
 
-    if @officer.update(params[:officer].permit(:name, :position, :img_url))
+    if @officer.update(params[:officer].permit(:name, :position, :img))
       redirect_to admin_officers_path
     else
       render 'edit'
@@ -47,7 +47,7 @@ class Admin::OfficersController < ApplicationController
 
   private
     def officer_params
-      params.require(:officer).permit(:name, :position, :img_url)
+      params.require(:officer).permit(:name, :position, :img)
     end
 
 end

@@ -19,7 +19,7 @@
       <tr>
         <th>Name</th>
         <th>Position</th>
-        <th>Image URL</th>
+        <th>Image</th>
         <th>Actions</th>
       </tr>
      
@@ -27,7 +27,7 @@
         <tr>
           <td><%= officer.name %></td>
           <td><%= officer.position %></td>
-          <td><%= officer.img_url %></td>
+          <td><%= officer.img %></td>
           <td><%= link_to 'Show', admin_officer_path(officer) %> | 
               <%= link_to 'Edit', edit_admin_officer_path(officer) %> | 
               <%= link_to 'Destroy', admin_officer_path(officer), method: :delete, data: { confirm: 'Are you sure?' } %></td>
