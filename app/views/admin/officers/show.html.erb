@@ -24,7 +24,7 @@
 
     <p>
       <strong>Image:</strong>
-      <%= @officer.img %>
+      <%= image_tag @officer.image.url(:medium) %>
     </p>
 
     <%= link_to 'Edit', edit_admin_officer_path(@officer), { class: "btn btn-default" } %>

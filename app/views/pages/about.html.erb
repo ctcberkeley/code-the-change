@@ -26,7 +26,7 @@
     <ul class="ch-grid">
       <% if @president %>
         <li>
-          <div class="ch-item" <% if @president.img != "" %>style="background-image:url(<%= asset_path @president.img %>)"<% end %>>
+          <div class="ch-item" style="background-image:url('<%= @president.image.url(:medium) %>')">
             <div class="ch-info">
               <h3><%= @president.name %></h3>
               <p><%= @president.position %></p>
@@ -36,7 +36,7 @@
       <% end %>
       <% if @vp_of_operations %>
         <li>
-          <div class="ch-item" <% if @vp_of_operations.img != "" %>style="background-image:url(<%= asset_path @vp_of_operations.img %>)"<% end %>>
+          <div class="ch-item" style="background-image:url('<%= @vp_of_operations.image.url(:medium) %>')">
             <div class="ch-info">
               <h3><%= @vp_of_operations.name %></h3>
               <p><%= @vp_of_operations.position %></p>
@@ -46,7 +46,7 @@
       <% end %>
       <% if @vp_of_marketing_and_finance %>
         <li>
-          <div class="ch-item" <% if @vp_of_marketing_and_finance.img != "" %>style="background-image:url(<%= asset_path @vp_of_marketing_and_finance.img %>)"<% end %>>
+          <div class="ch-item" style="background-image:url('<%= @vp_of_marketing_and_finance.image.url(:medium) %>')">
             <div class="ch-info">
               <h3><%= @vp_of_marketing_and_finance.name %></h3>
               <p><%= @vp_of_marketing_and_finance.position %></p>
@@ -56,7 +56,7 @@
       <% end %>
       <% @project_managers.each do |project_manager| %>
         <li>
-          <div class="ch-item" <% if project_manager.img != "" %>style="background-image:url(<%= asset_path project_manager.img %>)"<% end %>>
+          <div class="ch-item" style="background-image:url('<%= project_manager.image.url(:medium) %>')">
             <div class="ch-info">
               <h3><%= project_manager.name %></h3>
               <p><%= project_manager.position %></p>

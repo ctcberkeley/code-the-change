@@ -58,3 +58,6 @@ ruby "2.1.0"
 
 # Gem required for Heroku
 gem 'rails_12factor', group: :production
+
+# Use Paperclip for file attachments
+gem "paperclip", "~> 4.1"
