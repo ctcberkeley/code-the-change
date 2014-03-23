@@ -27,6 +27,11 @@
   </p>
 
   <p>
+    <%= f.label :screenshot %><br>
+    <%= f.file_field :screenshot %>
+  </p>
+
+  <p>
     <%= f.label :term_id %><br>
     <%= f.select :term_id, Term.all.collect { |term| [ term.season + " " + term.year.to_s, term.id ] } %>
   </p>
