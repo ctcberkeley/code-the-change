@@ -1,0 +1,28 @@
+<div class="modal fade" id=<%= project.id.to_s + "-modal" %> tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel"><%= project.organization %></h4>
+      </div>
+      <div class="modal-body project-body">
+        <p>
+          <%= project.description %>
+        </p>
+        <% if project.url != "" %>
+          <p>
+            <%= link_to project.url, project.url, target: "_blank" %>
+          </p>
+        <% end %>
+        <% if project.screenshot_file_name %>
+          <p>
+            <%= image_tag project.screenshot.url(:medium), class: "img-responsive img-project-body" %>
+          </p>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

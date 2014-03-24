@@ -6,21 +6,19 @@
     <h2>Projects</h2>
     <% @terms.each do |term| %>
       <h3 class="subheader"><%= term.season + " " + term.year.to_s %></h3>
-      <div class="panel-group ctc-panel-group" id=<%= term.id.to_s + "-accordion" %>>
+      <div class="row project-row">
         <% term.projects.each do |project| %>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent=<%= "#" + term.id.to_s + "-accordion" %> href="<%= '#' + project.id.to_s %>">
-                <h4 class="panel-title"><%= project.organization %></h4>
-              </a>
-            </div>
-            <div id="<%= project.id %>" class="panel-collapse collapse">
-              <div class="panel-body">
-                <%= project.description %>
+          <div class="col-md-3 col-sm-4 project-wrapper" data-toggle="modal" data-target=<%= "#" + project.id.to_s + "-modal" %>>
+            <div class="project">
+              <div class="project-image">
+                <span class="helper"></span>
+                <%= image_tag project.screenshot.url(:medium), class: "img-thumbnail img-responsive img-project" %>
               </div>
+              <div class="project-info"><%= project.organization %></div>
             </div>
           </div>
-        <% end %>
+          <%= render 'pages/project_modal', :project => project %>
+        <% end %>  
       </div>
     <% end %>
   </div>
