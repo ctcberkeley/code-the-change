@@ -2,6 +2,7 @@ class Officer < ActiveRecord::Base
   validates :name, presence: true
   validates :position, presence: true
 
+  attr_accessible :image
   has_attached_file :image, 
     :styles => { :thumbnail => "100x100>", :medium => "180x180>" }, 
     :default_url => "/images/officers/missing.png",
