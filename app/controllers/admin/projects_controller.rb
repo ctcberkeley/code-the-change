@@ -31,7 +31,7 @@ class Admin::ProjectsController < ApplicationController
   def update
     @project = Project.find(params[:id])
 
-    if @project.update(params[:project].permit(:organization, :description, :url, :screenshot, :term_id))
+    if @project.update(params[:project].permit(:organization, :description, :url, :image, :term_id))
       redirect_to admin_projects_path
     else
       render 'edit'
@@ -47,7 +47,7 @@ class Admin::ProjectsController < ApplicationController
 
   private
     def project_params
-      params.require(:project).permit(:organization, :description, :url, :screenshot, :term_id)
+      params.require(:project).permit(:organization, :description, :url, :image, :term_id)
     end
 
 end

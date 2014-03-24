@@ -14,9 +14,9 @@
             <%= link_to project.url, project.url, target: "_blank" %>
           </p>
         <% end %>
-        <% if project.screenshot_file_name %>
+        <% if project.image_file_name %>
           <p>
-            <%= image_tag project.screenshot.url(:medium), class: "img-responsive img-project-body" %>
+            <%= image_tag project.image.url(:medium), class: "img-responsive img-project-body" %>
           </p>
         <% end %>
       </div>

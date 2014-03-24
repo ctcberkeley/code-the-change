@@ -28,8 +28,8 @@
     </p>
 
     <p>
-      <strong>Screenshot:</strong>
-      <%= image_tag @project.screenshot.url(:medium) %>
+      <strong>Image:</strong>
+      <%= image_tag @project.image.url(:medium) %>
     </p>
 
     <%= link_to 'Edit', edit_admin_project_path(@project), { class: "btn btn-default" } %>
