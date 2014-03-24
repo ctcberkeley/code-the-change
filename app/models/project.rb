@@ -4,6 +4,10 @@ class Project < ActiveRecord::Base
   validates :organization, presence: true
   validates :description, presence: true
 
-  has_attached_file :screenshot, :styles => { :medium => "768x576>" }, :default_url => "/images/projects/missing.png"
+  has_attached_file :screenshot, 
+    :styles => { :medium => "768x576>" }, 
+    :default_url => "/images/projects/missing.png",
+    :storage => :dropbox,
+    :dropbox_credentials => Rails.root.join("config/dropbox.yml")
   validates_attachment_content_type :screenshot, :content_type => /\Aimage\/.*\Z/
 end

@@ -15,5 +15,5 @@
 /log/*.log
 /tmp
 
-# Ignore images uploaded locally
-/public/system/*
+# Ignore Dropbox credentials
+/config/initializers/dropbox.rb
