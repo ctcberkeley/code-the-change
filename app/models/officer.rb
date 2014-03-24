@@ -3,7 +3,7 @@ class Officer < ActiveRecord::Base
   validates :position, presence: true
 
   has_attached_file :image, 
-    :styles => { :medium => "180x180>" }, 
+    :styles => { :thumbnail => "100x100>", :medium => "180x180>" }, 
     :default_url => "/images/officers/missing.png",
     :storage => :dropbox,
     :dropbox_credentials => Rails.root.join("config/dropbox.yml")

@@ -27,7 +27,7 @@
         <tr>
           <td><%= officer.name %></td>
           <td><%= officer.position %></td>
-          <td><%= image_tag officer.image.url(:medium) %></td>
+          <td><%= image_tag officer.image.url(:thumbnail) %></td>
           <td><%= link_to 'Show', admin_officer_path(officer) %> | 
               <%= link_to 'Edit', edit_admin_officer_path(officer) %> | 
               <%= link_to 'Destroy', admin_officer_path(officer), method: :delete, data: { confirm: 'Are you sure?' } %></td>
