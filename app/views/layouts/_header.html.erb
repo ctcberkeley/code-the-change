@@ -15,8 +15,8 @@
         <li class="<%= 'active' if current_page?(projects_path) %>"><%= link_to "Projects", projects_path %></li>
         <li class="<%= 'active' if current_page?(course_path) %>"><%= link_to "Course", course_path %></li>
       </ul>
-      <% if admin_signed_in? %>
-        <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right">
+        <% if admin_signed_in? %>
           <li class="dropdown <%= 'active' if current_page?(admin_path) %>">
             <a href=<%= admin_path %> class="dropdown-toggle">Admin <b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -30,8 +30,10 @@
               <li><%= link_to "Sign out", destroy_admin_session_path, :method => :delete %></li>
             </ul>
           </li>
-        </ul>
-      <% end %>
+        <% else %>
+          <li><%= link_to "Sign in", new_admin_session_path %></li>
+        <% end %>
+      </ul>
     </nav>
   </div>
 </header>
