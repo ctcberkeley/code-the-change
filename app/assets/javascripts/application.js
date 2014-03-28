@@ -15,3 +15,6 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+//= require_tree ../../../vendor/assets/javascripts/.
+
+$("img").lazyload();
