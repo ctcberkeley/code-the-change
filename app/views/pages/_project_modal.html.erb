@@ -16,7 +16,7 @@
         <% end %>
         <% if project.image_file_name %>
           <p>
-            <%= image_tag project.image.url(:medium), class: "img-responsive img-project-body" %>
+            <%= x_image_tag project.image.url(:small), class: "img-responsive img-project-body" %>
           </p>
         <% end %>
       </div>

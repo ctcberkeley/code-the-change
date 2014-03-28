@@ -5,7 +5,7 @@ class Project < ActiveRecord::Base
   validates :description, presence: true
 
   has_attached_file :image, 
-    :styles => { :thumbnail => "120x90>", :medium => "500x375>" }, 
+    :styles => { :thumbnail => "120x90>", :small => "200x150>", :medium => "500x375>" }, 
     :default_url => "/images/projects/missing.png",
     :storage => :dropbox,
     :dropbox_credentials => Rails.root.join("config/dropbox.yml")
