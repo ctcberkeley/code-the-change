@@ -6,17 +6,12 @@
         <h4 class="modal-title" id="myModalLabel"><%= project.organization %></h4>
       </div>
       <div class="modal-body project-body">
-        <p>
+        <p class="description">
           <%= project.description %>
         </p>
         <% if project.url != "" %>
           <p>
             <%= link_to project.url, project.url, target: "_blank" %>
-          </p>
-        <% end %>
-        <% if project.image_file_name %>
-          <p>
-            <%= x_image_tag project.image.url(:small), class: "img-responsive img-project-body" %>
           </p>
         <% end %>
       </div>
