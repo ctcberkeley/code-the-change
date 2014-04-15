@@ -64,3 +64,7 @@ gem "paperclip-dropbox", ">= 1.1.7"
 
 # Lazy loading
 gem "lazyload-rails"
+
+group :production do
+  gem 'unicorn'
+end
