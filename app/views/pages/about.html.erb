@@ -25,44 +25,19 @@
     <h2>Officers</h2>
     <ul class="ch-grid">
       <% if @president %>
-        <li>
-          <div class="ch-item" style="background-image:url('<%= @president.image.url(:medium) %>')">
-            <div class="ch-info">
-              <h3><%= @president.name %></h3>
-              <p><%= @president.position %></p>
-            </div>
-          </div>
-        </li>
+        <%= render 'pages/officer', :officer => @president %>
+      <% end %>
+      <% if @vp_of_projects %>
+        <%= render 'pages/officer', :officer => @vp_of_projects %>
+      <% end %>
+      <% if @vp_of_development %>
+        <%= render 'pages/officer', :officer => @vp_of_development %>
       <% end %>
       <% if @vp_of_operations %>
-        <li>
-          <div class="ch-item" style="background-image:url('<%= @vp_of_operations.image.url(:medium) %>')">
-            <div class="ch-info">
-              <h3><%= @vp_of_operations.name %></h3>
-              <p><%= @vp_of_operations.position %></p>
-            </div>
-          </div>
-        </li>
-      <% end %>
-      <% if @vp_of_marketing_and_finance %>
-        <li>
-          <div class="ch-item" style="background-image:url('<%= @vp_of_marketing_and_finance.image.url(:medium) %>')">
-            <div class="ch-info">
-              <h3><%= @vp_of_marketing_and_finance.name %></h3>
-              <p><%= @vp_of_marketing_and_finance.position %></p>
-            </div>
-          </div>
-        </li>
+        <%= render 'pages/officer', :officer => @vp_of_operations %>
       <% end %>
       <% @project_managers.each do |project_manager| %>
-        <li>
-          <div class="ch-item" style="background-image:url('<%= project_manager.image.url(:medium) %>')">
-            <div class="ch-info">
-              <h3><%= project_manager.name %></h3>
-              <p><%= project_manager.position %></p>
-            </div>
-          </div>
-        </li>
+        <%= render 'pages/officer', :officer => project_manager %>
       <% end %>
     </ul>
   </div>

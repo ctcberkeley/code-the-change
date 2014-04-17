@@ -26,10 +26,12 @@ class PagesController < ApplicationController
     @officers.each do |officer|
       if officer.position == 'President'
         @president = officer
+      elsif officer.position == 'VP of Projects'
+        @vp_of_projects = officer
+      elsif officer.position == 'VP of Development'
+        @vp_of_development = officer
       elsif officer.position == 'VP of Operations'
         @vp_of_operations = officer
-      elsif officer.position == 'VP of Marketing & Finance'
-        @vp_of_marketing_and_finance = officer
       else
         @project_managers.push(officer)
       end
