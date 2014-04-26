@@ -62,9 +62,6 @@ gem 'rails_12factor', group: :production
 # Use Paperclip for file uploads and Dropbox for file storage
 gem "paperclip-dropbox", ">= 1.1.7"
 
-# Lazy loading
-gem "lazyload-rails"
-
 group :production do
   gem 'unicorn'
 end
