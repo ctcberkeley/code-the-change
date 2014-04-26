@@ -8,6 +8,7 @@
     <title><%= content_for?(:title) ? yield(:title) + " | Code the Change" : "Code the Change" %></title>
 
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   </head>
   <body>
     <%= render 'layouts/header' %>
@@ -19,7 +20,5 @@
     </div>
     
     <%= render 'layouts/footer' %>
-
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   </body>
 </html>
