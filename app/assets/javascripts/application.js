@@ -15,3 +15,11 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+
+$('.nav .dropdown').hover(function() {
+  $(this).closest('.dropdown-menu').stop(true, true).show();
+  $(this).addClass('open');
+}, function() {
+  $(this).closest('.dropdown-menu').stop(true, true).hide();
+  $(this).removeClass('open');
+});
