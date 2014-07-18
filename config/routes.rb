@@ -8,6 +8,7 @@ CodeTheChange::Application.routes.draw do
   get '/about', to: 'pages#about'
   get '/projects', to: 'pages#projects'
   get '/course', to: 'pages#course'
+  get '/sponsors', to: 'pages#sponsors'
   get '/admin', to: 'pages#admin'
 
   namespace :admin do
