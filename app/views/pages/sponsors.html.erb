@@ -27,7 +27,6 @@
             <p>Includes multiple on-campus informational sessions / workshops / events, company logo on sponsor page, and resume book.</p>
         </div>
     </div>
-    <!--
     <form action="sponsormail.php" method="POST">
         <p>Name</p> <input type="text" name="name">
         <p>Company</p> <input type="text" name="company">
@@ -42,7 +41,19 @@
         <p>Message</p><textarea name="message" rows="6" cols="25"></textarea><br>
         <input type="submit" value="Send"><input type="reset" value="Clear">
     </form>
-    -->
+
+
+    <%= form_for @sponsor, url: {action: "create"} do |f| %>
+        <%= f.text_field :name %>
+        <%= f.text_field :company %>
+        <%= select_tag(:package_pref, options_for_select([['Gold','Gold'],['Silver','Silver'],['Bronze','Bronze']])) %>
+        <%= f.text_field :email %>
+        <%= f.text_area :message, size: "60x12" %>
+        <%= f.submit "Send" %>
+    <% end %>
+
+
+
   </div>
 </div>
 

@@ -1,4 +1,4 @@
-class SponsorController < ApplicationController
+class SponsorsController < ApplicationController
   before_filter :authenticate_admin!
 
   def index
@@ -46,7 +46,7 @@ class SponsorController < ApplicationController
 
   private
     def event_params
-      params.require(:sponsor).permit(:name, :company, :package_pref, :email, :, :url)
+      params.require(:sponsor).permit(:name, :company, :package_pref, :email, :message, :url)
     end
 
         

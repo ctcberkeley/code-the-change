@@ -8,8 +8,11 @@ CodeTheChange::Application.routes.draw do
   get '/about', to: 'pages#about'
   get '/projects', to: 'pages#projects'
   get '/course', to: 'pages#course'
-  get '/sponsors', to: 'pages#sponsors'
+  #get '/sponsors', to: 'pages#sponsors'
+  #get '/sponsors/new', to: 'sponsor#new'
   get '/admin', to: 'pages#admin'
+
+  resources :sponsors
 
   namespace :admin do
     resources :terms, :events, :officers, :projects, :assignments
