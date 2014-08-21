@@ -15,45 +15,42 @@
     </div>
     <div class="row">
         <div class="col-md-4">
-            <h3><span class="label label-default label-bronze">Bronze</span> $200-$500</h3>
+            <h3><span class="label label-default label-bronze">Bronze</span>&nbsp;$250</h3>
             <p>Includes company logo on our sponsor page and resume book.</p>
         </div>
         <div class="col-md-4">
-            <h3><span class="label label-default label-silver">Silver</span> $500-$1000</h3>
+            <h3><span class="label label-default label-silver">Silver</span>&nbsp;$500</h3>
             <p>Includes one on-campus informational session or workshop, company logo on sponsor page, and resume book.</p>
         </div>
         <div class="col-md-4">
-            <h3><span class="label label-default label-gold">Gold</span> >$1000</h3>
+            <h3><span class="label label-default label-gold">Gold</span>&nbsp;$1000</h3>
             <p>Includes multiple on-campus informational sessions / workshops / events, company logo on sponsor page, and resume book.</p>
         </div>
     </div>
-    <form action="sponsormail.php" method="POST">
-        <p>Name</p> <input type="text" name="name">
-        <p>Company</p> <input type="text" name="company">
-        <p>Email</p> <input type="text" name="email">
-        <p>Preferred Sponsorship Package:</p>
-        <select name="type" size="1">
-            <option value="Gold">Gold</option>
-            <option value="Silver">Silver</option>
-            <option value="Bronze">Bronze</option>
-        </select>
-        <br>
-        <p>Message</p><textarea name="message" rows="6" cols="25"></textarea><br>
-        <input type="submit" value="Send"><input type="reset" value="Clear">
-    </form>
-
-
     <%= form_for @sponsor, url: {action: "create"} do |f| %>
+        <%= f.label :name %>
+        <br>
         <%= f.text_field :name %>
+        <br>
+        <%= f.label :company %>
+        <br>
         <%= f.text_field :company %>
+        <br>
+        <%= f.label :package_pref %>
+        <br>
         <%= select_tag(:package_pref, options_for_select([['Gold','Gold'],['Silver','Silver'],['Bronze','Bronze']])) %>
+        <br>
+        <%= f.label :email %>
+        <br>
         <%= f.text_field :email %>
+        <br>
+        <%= f.label :message %>
+        <br>
         <%= f.text_area :message, size: "60x12" %>
+        <br>
+        <br>
         <%= f.submit "Send" %>
     <% end %>
-
-
-
   </div>
 </div>
 
