@@ -312,49 +312,25 @@
 }
 
 /*
- * Course
+ * Sponsors
  *
- * Header section with basic course information
+ * Sponsorship information
  */
 
-.course {
-  padding: 30px 0 30px;
-  .course-info {
+.sponsors {
+  padding: 30px 0 80px;
+  .label-gold {
+    background-color: #c98910;
+  }
+  .label-silver {
+    background-color: #a8a8a8;
+  }
+  .label-bronze {
+    background-color: #965a38;
+  }
+  .instructions {
+    margin-top: 30px;
     text-align: center;
-    h1 {
-      margin-top: 10px;
-    }    
-    p {
-    margin-bottom: 0;
-    font-size: 16px;
-    }
-  }
-}
-@media (min-width: 992px) {
-  .course {
-    .course-info {
-      text-align: left;
-    }
-  }
-}
-
-/*
- * Tabs
- *
- * Tabbed sections for course content
- */
-
-.tabs {
-  padding-bottom: 80px;
-  .assignments {
-    .submission {
-      text-align: center;
-    }
-  }
-  .course-information {
-    h4 {
-      color: #428bca;
-    }
   }
 }
 
