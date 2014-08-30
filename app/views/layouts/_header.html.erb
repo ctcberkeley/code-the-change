@@ -27,11 +27,11 @@
               <li class="<%= 'active' if current_page?(admin_lessons_path) %>"><%= link_to "Lessons", admin_lessons_path %></li>
               <li class="<%= 'active' if current_page?(admin_assignments_path) %>"><%= link_to "Assignments", admin_assignments_path %></li>
               <li class="divider"></li>
-              <li><%= link_to "Sign out", destroy_admin_session_path, :method => :delete %></li>
+              <li><%= link_to "Sign Out", destroy_admin_session_path, :method => :delete %></li>
             </ul>
           </li>
         <% else %>
-          <li><%= link_to "Sign in", new_admin_session_path %></li>
+          <li><%= link_to "Sign In", new_admin_session_path %></li>
         <% end %>
       </ul>
     </nav>
