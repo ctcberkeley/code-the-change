@@ -9,6 +9,7 @@ CodeTheChange::Application.routes.draw do
   get '/projects', to: 'pages#projects'
   get '/course', to: 'pages#course'
   get '/sponsors', to: 'pages#sponsors'
+  get '/apply', to: 'pages#apply'
   get '/admin', to: 'pages#admin'
 
   resources :sponsors

@@ -46,6 +46,9 @@ class PagesController < ApplicationController
   def sponsors
   end
 
+  def apply
+  end
+
   def admin
   end
 
