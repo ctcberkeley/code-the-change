@@ -17,19 +17,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if admin_signed_in? %>
-          <li class="dropdown <%= 'active' if current_page?(admin_path) %>">
-            <a href=<%= admin_path %> class="dropdown-toggle">Admin <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li class="<%= 'active' if current_page?(admin_events_path) %>"><%= link_to "Events", admin_events_path %></li>
-              <li class="<%= 'active' if current_page?(admin_officers_path) %>"><%= link_to "Officers", admin_officers_path %></li>
-              <li class="<%= 'active' if current_page?(admin_projects_path) %>"><%= link_to "Projects", admin_projects_path %></li>
-              <li class="<%= 'active' if current_page?(admin_terms_path) %>"><%= link_to "Terms", admin_terms_path %></li>
-              <li class="<%= 'active' if current_page?(admin_lessons_path) %>"><%= link_to "Lessons", admin_lessons_path %></li>
-              <li class="<%= 'active' if current_page?(admin_assignments_path) %>"><%= link_to "Assignments", admin_assignments_path %></li>
-              <li class="divider"></li>
-              <li><%= link_to "Sign Out", destroy_admin_session_path, :method => :delete %></li>
-            </ul>
-          </li>
+          <li class="<%= 'active' if current_page?(admin_path) %>"><%= link_to "Admin", admin_path %></li>
+          <li><%= link_to "Sign Out", destroy_admin_session_path, :method => :delete %></li>
         <% else %>
           <li><%= link_to "Sign In", new_admin_session_path %></li>
         <% end %>
