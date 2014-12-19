@@ -21,7 +21,6 @@ class PagesController < ApplicationController
   def about
     @officers = Officer.all
     @project_managers = []
-    @decal_assistants = []
 
     @officers.each do |officer|
       if officer.position == 'President'
@@ -44,9 +43,6 @@ class PagesController < ApplicationController
   end
 
   def sponsors
-  end
-
-  def apply
   end
 
   def admin
